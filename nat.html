@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+<title>Natura</title>
+<link rel="icon" type="image/png" href="icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="natura.css">
+
+</head>
+<body>
+    <section class="natura1" id="js-hero">
+        <img src="natura1.jpg"/>
+      </section>
+      <section class="container1">
+        <h1>Norwegia</h1>
+        <p>Norwegia to idealny wakacyjny kierunek, dla osób, które podczas urlopu chciałyby 
+        wypoczywać aktywnie. Piękna przyroda, malownicze fiordy, liczne wodospady, lofoty czyli
+        „rajskie wyspy północy” zachwycą na pewno każdego, kto raz tu przyjedzie. To zdecydowanie 
+        kraj dla amatorów silnych przeżyć, punkty widokowe, trasy trekkingowe, rejsy promem, trasy 
+        rowerowe, zadowolą amatorów aktywnego wypoczynku, którzy chcą uciec przed miejskim zgiełkiem 
+        i zatłoczonymi plażami południa.</p>
+        <h1>Dokąd pojechać?</h1>
+        <p>Na pytanie „co kojarzy Ci się z Norwegią?” większość osób z pewnością odpowiedziałaby, 
+            że fiordy. Fiordy to długie, wąskie, polodowcowe zatoki wchodzące daleko w głąb kontynentu, 
+            często silnie rozgałęzione. Powstały na skutek działalności lodowca. Najwięcej fiordów 
+            znajduję się na zachodnim wybrzeżu państwa. Są to malownicze miejsca z licznymi wodospadami, 
+            które spływają po stromych zboczach, i z kolorowymi, niewielkimi domkami u podnóża. 
+            Woda w fiordach jest słabo zasolona, dzięki czemu jest przejrzysta i można w niej z łatwością 
+            wędkować. Fiordy są częstym celem pieszych wędrówek czy wycieczek rowerowych. Najpopularniejsze 
+            z nich Naroyfjord i Geirangerfjord są wpisane na Listę Światowego Dziedzictwa UNESCO.</p>
+            <br>
+            <p>Osoby spragnione silniejszych przeżyć powinny zdecydować się na wycieczkę po lodowcu. 
+            Na wędrówkę można wybrać się jedynie z doświadczonym, licencjonowanym przewodnikiem. 
+            Warto sprawdzić te organizowane po jęzorze Nigardsbreen części Jostedalsbreen, 
+            największego lodowca kontynentalnej Europy.</p>
+            <br>
+            <p>Jednym z najciekawszych i najpiękniejszych zakątków Norwegii jest Archipelag Lofotów.
+            Można tu znaleźć zarówno ośnieżone górskie szczyty, schodzące niemal do morza, 
+            małe rybackie osady jak i piaszczyste plaże. Urozmaiconą rzeźbę zawdzięczają ostatniemu 
+            zlodowaceniu. Po działaniu lodowca pozostała silnie rozczłonkowana linia brzegowa, 
+            osłonięte zatoczki i liczne, malownicze fiordy. Dzięki takiemu ukształtowaniu terenu 
+            Lofoty sprawiają wrażenie niedostępnych i dzikich. Największe wrażenie robią na turystach, 
+            którzy przybywają tu drogą morską, np. promem. Lofoty to również raj dla wędkarzy.</p>
+            <br>
+            <p>Będąc w Norwegii warto zwrócić uwagę na kościoły. Stavkirke – to tzw. kościoły słupowe 
+            (klepkowe), które zostały wybudowane w okresie między X a XIII wiekiem, gdy chrześcijaństwo 
+            mieszało się jeszcze z wiarą pogańską. Były budowane bez użycia gwoździ, posiadają liczne 
+            drewniane zdobienia. Jeden z takich kościołów – Świątynie Wang, można obejrzeć w Karpaczu. 
+            Dokąd została przewieziona z Norwegii.</p>
+      </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+
+<script>
+    $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    $("#js-hero img").css({
+      width: (100 + scroll/5) + "%"
+    })
+  })
+  </script>
+<br><br><br><br><br>
+
+<div class="guzik">
+<button onclick="window.location.href='galeria.html'" class="btn default">Zobacz galerię zdjęć</buttononclick="window.location.href='b.php'"></div>
+<div class="guzik2">
+    <br><br><br><br><br>
+<button onclick="window.location.href='index.html'" class="btn default">Wróć do strony głównej</buttononclick="window.location.href='b.php'"></div>
+</body>
+
+</html>

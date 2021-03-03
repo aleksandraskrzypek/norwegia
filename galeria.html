@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="gal.css">
+</head>
+
+<body>
+    <div class="lewa">
+        <a href ="index.html"><img src="logo.png"></a>
+    </div>
+    
+
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="natura1.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura2.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura3.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura4.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura5.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura6.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura7.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura8.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura9.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura10.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura12.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura11.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura13.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura14.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura15.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura16.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura17.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura18.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura19.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura20.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura21.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura22.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura23.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura24.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura25.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura26.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura27.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura28.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura29.jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="natura30.jpg" alt=""></div>
+        </div>
+    </div>
+    <script>
+        var gallery = document.querySelector('#gallery');
+    var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+    var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+    var resizeAll = function () {
+        var altura = getVal(gallery, 'grid-auto-rows');
+        var gap = getVal(gallery, 'grid-row-gap');
+        gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+            var el = item;
+            el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+        });
+    };
+    gallery.querySelectorAll('img').forEach(function (item) {
+        item.classList.add('byebye');
+        if (item.complete) {
+            console.log(item.src);
+        }
+        else {
+            item.addEventListener('load', function () {
+                var altura = getVal(gallery, 'grid-auto-rows');
+                var gap = getVal(gallery, 'grid-row-gap');
+                var gitem = item.parentElement.parentElement;
+                gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+                item.classList.remove('byebye');
+            });
+        }
+    });
+    window.addEventListener('resize', resizeAll);
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        item.addEventListener('click', function () {        
+            item.classList.toggle('full');        
+        });
+    });
+    
+    </script>
+</body>
+</html>
+

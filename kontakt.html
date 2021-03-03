@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html profile="http://www.w3.org/2005/10/profile">
+<head>
+<title>Kontakt</title>
+<link rel="icon" type="image/png" href="icon.png">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style3.css">
+<script type="text/javascript">
+
+    function przetwarzaj_dane ()
+
+    {
+      var brakuje_danych=false;
+      var formularz=document.forms[0];
+      var napis="";
+      if (formularz.imie.value == ""){
+        napis += "imię\n"
+        brakuje_danych=true;
+      }
+      if (formularz.nazwisko.value == ""){
+        napis += "nazwisko\n"
+        brakuje_danych=true;
+      }
+      if (formularz.kraj.value == ""){
+        napis += "kraj\n"
+        brakuje_danych=true;
+      }
+      if (formularz.tel.value == ""){
+        napis += "telefon\n"
+        brakuje_danych=true;
+      }
+      if (!brakuje_danych)
+        formularz.submit();
+      else
+        alert ("Nie wypełniłeś następujących pól:\n" + napis);
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="lewa">
+            <a href ="index.html"><img src="logo.png"></a>
+        </div>
+        <div class="srodek">
+            <a href="onas.html">O NAS</a>
+            <a href="natura.html">NATURA</a>
+            <a href="wycieczki.html">WYCIECZKI</a>
+            <a href="kontakt.html">KONTAKT</a>
+        </div>
+        
+
+
+        
+        <form name="formularz1"
+        action="index.php"
+        method="get">
+      <fieldset>
+  <div>
+  Proszę podać swoje dane:
+  <br />
+  <i>(Pola oznaczone * muszą zostać wypełnione)</i>
+  <br /><br />
+  </div>
+  <table>
+  <tr>
+    <td><b>Dane personalne:</b></td>
+    <td></td>
+  </tr>
+  <tr>
+  <td>imię:</td>
+  <td><input type="text" name="imie">*</td>
+  </tr>
+  <tr>
+    <td>nazwisko:</td>
+    <td><input type="text" name="nazwisko">*</td>
+  </tr>
+  <tr>
+    <td><B>Adres:</B></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ulica:</td>
+    <td><input type="text" name="ulica"></td>
+  </tr>
+  <tr>
+    <td>nr domu:</td>
+    <td><input type="text" name="nrdomu"></td>
+  </tr>
+  <tr>
+    <td>kod:</td>
+    <td><input type="text" name="kod"></td>
+  </tr>
+  <tr>
+    <td>miasto:</td>
+    <td><input type="text" name="miasto"></td>
+  </tr>
+  <tr>
+    <td>kraj:</td>
+    <td><input type="text" name="kraj">*</td>
+  </tr>
+  <tr>
+    <td>tel.:</td>
+    <td><input type="text" name="tel">*</td>
+  </tr>
+  <tr>
+  <td></td>
+  <td align="center">
+    <input type="button" name="wyslij"
+    value="   Wyślij!   " onClick="przetwarzaj_dane()">
+  </td>
+  </tr>
+  </table>
+  </fieldset>
+  </form>
+          <div id="kontakt">
+            <div class="kont">
+                <h1>Skontaktuj się z nami</h1>
+                <p>Za pomocą formularza, który znajduję się po lewej stronie, możesz się z nami skontaktować zostawiając nam swoje dane. Nasz zespoł postara się odpowiedzieć najszybciej, jak to jest możliwe. Jeśli wolisz, możesz znaleźć nas również tutaj:</p>
+                <br>
+                <b><p>Wesoła, 03-977 Kraków</p></b>
+                <b><p>tel. 111 222 333</p></b>
+
+            </div>
+        </div>
+</body>
+</html
